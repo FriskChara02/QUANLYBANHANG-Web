@@ -1,0 +1,104 @@
+/* Chỉnh sửa Navbar */
+.navbar {
+    background: linear-gradient(135deg, #009688, #004d40); /* Màu gradient xanh dương và xanh lá */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px; /* Thêm khoảng cách giữa các chữ để dễ nhìn */
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #f1f1f1 !important; /* Màu sắc nhẹ nhàng khi hover */
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #004d40;
+    color: #ffffff;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.navbar-nav .btn {
+    background-color: #212529;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-nav .btn:hover {
+    background-color: #343a40;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Tùy chỉnh nút Đăng Xuất thành màu đỏ */
+.navbar-nav .btn.logout-btn {
+    background-color: #dc3545; /* Màu đỏ của Bootstrap */
+}
+
+.navbar-nav .btn.logout-btn:hover {
+    background-color: #c82333; /* Màu đỏ đậm hơn khi hover */
+    transform: translateY(-3px);
+}
+
+/* Icon trong nút */
+.navbar-nav .btn i {
+    margin-right: 8px;
+}
+
+/* Chỉnh sửa Navbar-toggler cho mobile */
+.navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive: Cải thiện trải nghiệm di động */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 15px;
+        font-size: 18px; /* Phóng to font-size trên di động */
+    }
+
+    .navbar-nav .btn {
+        margin: 10px auto;
+        display: block;
+        width: fit-content;
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .navbar-toggler {
+        background-color: #009688; /* Thêm màu nền cho nút burger */
+        color: white;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff; /* Màu của icon burger */
+    }
+}

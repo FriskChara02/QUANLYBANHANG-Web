@@ -1,0 +1,166 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Thanh tìm kiếm */
+.search-container .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#search-input {
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+}
+
+#search-btn {
+    border-radius: 0 20px 20px 0;
+    background-color: #007bff;
+    border: none;
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form */
+#product-form {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#submit-btn, #update-btn {
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+#submit-btn {
+    background-color: #28a745;
+}
+
+#submit-btn:hover {
+    background-color: #218838;
+}
+
+#update-btn {
+    background-color: #ffc107;
+}
+
+#update-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Danh sách sản phẩm */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+    gap: 20px;
+}
+
+.product-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.product-item .card-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.product-item .card-text {
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.product-item .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.product-item .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.product-item .btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.product-item .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: 1fr; /* Trên mobile chỉ 1 cột */
+    }
+
+    .product-item .row {
+        flex-direction: column;
+    }
+
+    .product-item img {
+        max-height: 200px;
+        width: 100%;
+    }
+
+    .search-container .input-group {
+        max-width: 100%;
+    }
+}
